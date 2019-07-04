@@ -13,8 +13,7 @@ namespace ShinraCo.Rotations
             if (await BarrageActive()) return true;
             if (await DotSnapshot()) return true;
             if (await IronJaws()) return true;
-            if (await RefulgentArrow()) return true;
-            if (await StraightShotBuff()) return true;
+            //if (await RefulgentArrow()) return true;
             if (await QuickNock()) return true;
             if (await Windbite()) return true;
             if (await VenomousBite()) return true;
@@ -42,17 +41,10 @@ namespace ShinraCo.Rotations
             if (await Barrage()) return true;
             // Off-GCDs
             if (await PitchPerfect()) return true;
-            if (await MiserysEnd()) return true;
             if (await RainOfDeath()) return true;
             if (await Bloodletter()) return true;
             if (await EmpyrealArrow()) return true;
-            if (await Sidewinder()) return true;
-            // Role
-            await Helpers.UpdateParty();
-            if (await Palisade()) return true;
-            if (await Refresh()) return true;
-            if (await Tactician()) return true;
-            return await Invigorate();
+            return await Sidewinder();
         }
 
         #endregion
@@ -83,7 +75,6 @@ namespace ShinraCo.Rotations
         public override async Task<bool> Pull()
         {
             Helpers.Debug("Pull...");
-            if (await FoeRequiem()) return true;
             return await Combat();
         }
 

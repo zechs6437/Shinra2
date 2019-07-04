@@ -196,16 +196,8 @@ namespace ShinraCo.Settings.Forms
 
             BardSecondWind.Checked = ShinraEx.Settings.BardSecondWind;
             BardPeloton.Checked = ShinraEx.Settings.BardPeloton;
-            BardInvigorate.Checked = ShinraEx.Settings.BardInvigorate;
-            BardTactician.Checked = ShinraEx.Settings.BardTactician;
-            BardRefresh.Checked = ShinraEx.Settings.BardRefresh;
-            BardPalisade.Checked = ShinraEx.Settings.BardPalisade;
 
             BardSecondWindPct.Value = ShinraEx.Settings.BardSecondWindPct;
-            BardInvigoratePct.Value = ShinraEx.Settings.BardInvigoratePct;
-            BardTacticianPct.Value = ShinraEx.Settings.BardTacticianPct;
-            BardRefreshPct.Value = ShinraEx.Settings.BardRefreshPct;
-            BardPalisadePct.Value = ShinraEx.Settings.BardPalisadePct;
 
             #endregion
 
@@ -235,8 +227,6 @@ namespace ShinraCo.Settings.Forms
             #region Buff
 
             BardRagingStrikes.Checked = ShinraEx.Settings.BardRagingStrikes;
-            BardFoeRequiem.Checked = ShinraEx.Settings.BardFoeRequiem;
-            BardFoeRequiemPct.Value = ShinraEx.Settings.BardFoeRequiemPct;
             BardBarrage.Checked = ShinraEx.Settings.BardBarrage;
             BardBattleVoice.Checked = ShinraEx.Settings.BardBattleVoice;
 
@@ -1542,49 +1532,9 @@ namespace ShinraCo.Settings.Forms
             ShinraEx.Settings.BardPeloton = BardPeloton.Checked;
         }
 
-        private void BardInvigorate_CheckedChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardInvigorate = BardInvigorate.Checked;
-        }
-
-        private void BardTactician_CheckedChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardTactician = BardTactician.Checked;
-        }
-
-        private void BardRefresh_CheckedChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardRefresh = BardRefresh.Checked;
-        }
-
-        private void BardPalisade_CheckedChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardPalisade = BardPalisade.Checked;
-        }
-
         private void BardSecondWindPct_ValueChanged(object sender, EventArgs e)
         {
             ShinraEx.Settings.BardSecondWindPct = Convert.ToInt32(BardSecondWindPct.Value);
-        }
-
-        private void BardInvigoratePct_ValueChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardInvigoratePct = Convert.ToInt32(BardInvigoratePct.Value);
-        }
-
-        private void BardTacticianPct_ValueChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardTacticianPct = Convert.ToInt32(BardTacticianPct.Value);
-        }
-
-        private void BardRefreshPct_ValueChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardRefreshPct = Convert.ToInt32(BardRefreshPct.Value);
-        }
-
-        private void BardPalisadePct_ValueChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardPalisadePct = Convert.ToInt32(BardPalisadePct.Value);
         }
 
         #endregion
@@ -1646,16 +1596,6 @@ namespace ShinraCo.Settings.Forms
         private void BardRagingStrikes_CheckedChanged(object sender, EventArgs e)
         {
             ShinraEx.Settings.BardRagingStrikes = BardRagingStrikes.Checked;
-        }
-
-        private void BardFoeRequiem_CheckedChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardFoeRequiem = BardFoeRequiem.Checked;
-        }
-
-        private void BardFoeRequiemPct_ValueChanged(object sender, EventArgs e)
-        {
-            ShinraEx.Settings.BardFoeRequiemPct = Convert.ToInt32(BardFoeRequiemPct.Value);
         }
 
         private void BardBarrage_CheckedChanged(object sender, EventArgs e)

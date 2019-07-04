@@ -483,23 +483,12 @@
             this.BardSidewinder = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardSongs = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardBuffGroup = new ShinraCo.Settings.Forms.Design.CustomGroup();
-            this.BardFoeRequiemPct = new ShinraCo.Settings.Forms.Design.UserNumeric();
-            this.BardFoeRequiem = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardBarrage = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardBattleVoice = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardRagingStrikes = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardRoleGroup = new ShinraCo.Settings.Forms.Design.CustomGroup();
-            this.BardPalisadePct = new ShinraCo.Settings.Forms.Design.UserNumeric();
-            this.BardPalisade = new ShinraCo.Settings.Forms.Design.CustomCheck();
-            this.BardRefreshPct = new ShinraCo.Settings.Forms.Design.UserNumeric();
-            this.BardRefresh = new ShinraCo.Settings.Forms.Design.CustomCheck();
-            this.BardTacticianPct = new ShinraCo.Settings.Forms.Design.UserNumeric();
-            this.BardInvigoratePct = new ShinraCo.Settings.Forms.Design.UserNumeric();
             this.BardSecondWindPct = new ShinraCo.Settings.Forms.Design.UserNumeric();
-            this.BardArmGraze = new ShinraCo.Settings.Forms.Design.CustomCheckDisabled();
             this.BardHeadGraze = new ShinraCo.Settings.Forms.Design.CustomCheckDisabled();
-            this.BardTactician = new ShinraCo.Settings.Forms.Design.CustomCheck();
-            this.BardInvigorate = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardPeloton = new ShinraCo.Settings.Forms.Design.CustomCheck();
             this.BardLegGraze = new ShinraCo.Settings.Forms.Design.CustomCheckDisabled();
             this.BardFootGraze = new ShinraCo.Settings.Forms.Design.CustomCheckDisabled();
@@ -7253,7 +7242,7 @@
             this.BardMiscGroup.Controls.Add(this.BardPotion);
             this.BardMiscGroup.Controls.Add(this.BardOpener);
             this.BardMiscGroup.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BardMiscGroup.Location = new System.Drawing.Point(218, 269);
+            this.BardMiscGroup.Location = new System.Drawing.Point(218, 244);
             this.BardMiscGroup.Name = "BardMiscGroup";
             this.BardMiscGroup.Size = new System.Drawing.Size(115, 66);
             this.BardMiscGroup.TabIndex = 4;
@@ -7403,43 +7392,16 @@
             // 
             // BardBuffGroup
             // 
-            this.BardBuffGroup.Controls.Add(this.BardFoeRequiemPct);
-            this.BardBuffGroup.Controls.Add(this.BardFoeRequiem);
             this.BardBuffGroup.Controls.Add(this.BardBarrage);
             this.BardBuffGroup.Controls.Add(this.BardBattleVoice);
             this.BardBuffGroup.Controls.Add(this.BardRagingStrikes);
             this.BardBuffGroup.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BardBuffGroup.Location = new System.Drawing.Point(218, 151);
             this.BardBuffGroup.Name = "BardBuffGroup";
-            this.BardBuffGroup.Size = new System.Drawing.Size(204, 112);
+            this.BardBuffGroup.Size = new System.Drawing.Size(204, 87);
             this.BardBuffGroup.TabIndex = 1;
             this.BardBuffGroup.TabStop = false;
             this.BardBuffGroup.Text = "Buff";
-            // 
-            // BardFoeRequiemPct
-            // 
-            this.BardFoeRequiemPct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.BardFoeRequiemPct.Location = new System.Drawing.Point(109, 39);
-            this.BardFoeRequiemPct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BardFoeRequiemPct.Name = "BardFoeRequiemPct";
-            this.BardFoeRequiemPct.Size = new System.Drawing.Size(89, 22);
-            this.BardFoeRequiemPct.TabIndex = 4;
-            this.BardFoeRequiemPct.ValueChanged += new System.EventHandler(this.BardFoeRequiemPct_ValueChanged);
-            // 
-            // BardFoeRequiem
-            // 
-            this.BardFoeRequiem.AutoSize = true;
-            this.BardFoeRequiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BardFoeRequiem.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BardFoeRequiem.ForeColor = System.Drawing.Color.White;
-            this.BardFoeRequiem.Location = new System.Drawing.Point(6, 39);
-            this.BardFoeRequiem.Name = "BardFoeRequiem";
-            this.BardFoeRequiem.Size = new System.Drawing.Size(90, 17);
-            this.BardFoeRequiem.TabIndex = 3;
-            this.BardFoeRequiem.TabStop = false;
-            this.BardFoeRequiem.Text = "Foe Requiem";
-            this.BardFoeRequiem.UseVisualStyleBackColor = true;
-            this.BardFoeRequiem.CheckedChanged += new System.EventHandler(this.BardFoeRequiem_CheckedChanged);
             // 
             // BardBarrage
             // 
@@ -7447,9 +7409,9 @@
             this.BardBarrage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BardBarrage.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BardBarrage.ForeColor = System.Drawing.Color.White;
-            this.BardBarrage.Location = new System.Drawing.Point(6, 62);
+            this.BardBarrage.Location = new System.Drawing.Point(6, 39);
             this.BardBarrage.Name = "BardBarrage";
-            this.BardBarrage.Size = new System.Drawing.Size(63, 17);
+            this.BardBarrage.Size = new System.Drawing.Size(62, 17);
             this.BardBarrage.TabIndex = 2;
             this.BardBarrage.TabStop = false;
             this.BardBarrage.Text = "Barrage";
@@ -7462,9 +7424,9 @@
             this.BardBattleVoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BardBattleVoice.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BardBattleVoice.ForeColor = System.Drawing.Color.White;
-            this.BardBattleVoice.Location = new System.Drawing.Point(6, 85);
+            this.BardBattleVoice.Location = new System.Drawing.Point(6, 62);
             this.BardBattleVoice.Name = "BardBattleVoice";
-            this.BardBattleVoice.Size = new System.Drawing.Size(83, 17);
+            this.BardBattleVoice.Size = new System.Drawing.Size(82, 17);
             this.BardBattleVoice.TabIndex = 1;
             this.BardBattleVoice.TabStop = false;
             this.BardBattleVoice.Text = "Battle Voice";
@@ -7488,17 +7450,8 @@
             // 
             // BardRoleGroup
             // 
-            this.BardRoleGroup.Controls.Add(this.BardPalisadePct);
-            this.BardRoleGroup.Controls.Add(this.BardPalisade);
-            this.BardRoleGroup.Controls.Add(this.BardRefreshPct);
-            this.BardRoleGroup.Controls.Add(this.BardRefresh);
-            this.BardRoleGroup.Controls.Add(this.BardTacticianPct);
-            this.BardRoleGroup.Controls.Add(this.BardInvigoratePct);
             this.BardRoleGroup.Controls.Add(this.BardSecondWindPct);
-            this.BardRoleGroup.Controls.Add(this.BardArmGraze);
             this.BardRoleGroup.Controls.Add(this.BardHeadGraze);
-            this.BardRoleGroup.Controls.Add(this.BardTactician);
-            this.BardRoleGroup.Controls.Add(this.BardInvigorate);
             this.BardRoleGroup.Controls.Add(this.BardPeloton);
             this.BardRoleGroup.Controls.Add(this.BardLegGraze);
             this.BardRoleGroup.Controls.Add(this.BardFootGraze);
@@ -7506,80 +7459,10 @@
             this.BardRoleGroup.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BardRoleGroup.Location = new System.Drawing.Point(13, 6);
             this.BardRoleGroup.Name = "BardRoleGroup";
-            this.BardRoleGroup.Size = new System.Drawing.Size(199, 251);
+            this.BardRoleGroup.Size = new System.Drawing.Size(199, 139);
             this.BardRoleGroup.TabIndex = 0;
             this.BardRoleGroup.TabStop = false;
             this.BardRoleGroup.Text = "Role";
-            // 
-            // BardPalisadePct
-            // 
-            this.BardPalisadePct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.BardPalisadePct.Location = new System.Drawing.Point(104, 223);
-            this.BardPalisadePct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BardPalisadePct.Name = "BardPalisadePct";
-            this.BardPalisadePct.Size = new System.Drawing.Size(89, 22);
-            this.BardPalisadePct.TabIndex = 16;
-            this.BardPalisadePct.ValueChanged += new System.EventHandler(this.BardPalisadePct_ValueChanged);
-            // 
-            // BardPalisade
-            // 
-            this.BardPalisade.AutoSize = true;
-            this.BardPalisade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BardPalisade.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BardPalisade.ForeColor = System.Drawing.Color.White;
-            this.BardPalisade.Location = new System.Drawing.Point(6, 223);
-            this.BardPalisade.Name = "BardPalisade";
-            this.BardPalisade.Size = new System.Drawing.Size(65, 17);
-            this.BardPalisade.TabIndex = 15;
-            this.BardPalisade.TabStop = false;
-            this.BardPalisade.Text = "Palisade";
-            this.BardPalisade.UseVisualStyleBackColor = true;
-            this.BardPalisade.CheckedChanged += new System.EventHandler(this.BardPalisade_CheckedChanged);
-            // 
-            // BardRefreshPct
-            // 
-            this.BardRefreshPct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.BardRefreshPct.Location = new System.Drawing.Point(104, 154);
-            this.BardRefreshPct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BardRefreshPct.Name = "BardRefreshPct";
-            this.BardRefreshPct.Size = new System.Drawing.Size(89, 22);
-            this.BardRefreshPct.TabIndex = 14;
-            this.BardRefreshPct.ValueChanged += new System.EventHandler(this.BardRefreshPct_ValueChanged);
-            // 
-            // BardRefresh
-            // 
-            this.BardRefresh.AutoSize = true;
-            this.BardRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BardRefresh.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BardRefresh.ForeColor = System.Drawing.Color.White;
-            this.BardRefresh.Location = new System.Drawing.Point(6, 154);
-            this.BardRefresh.Name = "BardRefresh";
-            this.BardRefresh.Size = new System.Drawing.Size(62, 17);
-            this.BardRefresh.TabIndex = 13;
-            this.BardRefresh.TabStop = false;
-            this.BardRefresh.Text = "Refresh";
-            this.BardRefresh.UseVisualStyleBackColor = true;
-            this.BardRefresh.CheckedChanged += new System.EventHandler(this.BardRefresh_CheckedChanged);
-            // 
-            // BardTacticianPct
-            // 
-            this.BardTacticianPct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.BardTacticianPct.Location = new System.Drawing.Point(104, 131);
-            this.BardTacticianPct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BardTacticianPct.Name = "BardTacticianPct";
-            this.BardTacticianPct.Size = new System.Drawing.Size(89, 22);
-            this.BardTacticianPct.TabIndex = 12;
-            this.BardTacticianPct.ValueChanged += new System.EventHandler(this.BardTacticianPct_ValueChanged);
-            // 
-            // BardInvigoratePct
-            // 
-            this.BardInvigoratePct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.BardInvigoratePct.Location = new System.Drawing.Point(104, 108);
-            this.BardInvigoratePct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BardInvigoratePct.Name = "BardInvigoratePct";
-            this.BardInvigoratePct.Size = new System.Drawing.Size(89, 22);
-            this.BardInvigoratePct.TabIndex = 11;
-            this.BardInvigoratePct.ValueChanged += new System.EventHandler(this.BardInvigoratePct_ValueChanged);
             // 
             // BardSecondWindPct
             // 
@@ -7591,21 +7474,6 @@
             this.BardSecondWindPct.TabIndex = 10;
             this.BardSecondWindPct.ValueChanged += new System.EventHandler(this.BardSecondWindPct_ValueChanged);
             // 
-            // BardArmGraze
-            // 
-            this.BardArmGraze.AutoCheck = false;
-            this.BardArmGraze.AutoSize = true;
-            this.BardArmGraze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BardArmGraze.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BardArmGraze.ForeColor = System.Drawing.Color.DimGray;
-            this.BardArmGraze.Location = new System.Drawing.Point(6, 200);
-            this.BardArmGraze.Name = "BardArmGraze";
-            this.BardArmGraze.Size = new System.Drawing.Size(75, 17);
-            this.BardArmGraze.TabIndex = 8;
-            this.BardArmGraze.TabStop = false;
-            this.BardArmGraze.Text = "Arm Graze";
-            this.BardArmGraze.UseVisualStyleBackColor = true;
-            // 
             // BardHeadGraze
             // 
             this.BardHeadGraze.AutoCheck = false;
@@ -7613,43 +7481,13 @@
             this.BardHeadGraze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BardHeadGraze.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BardHeadGraze.ForeColor = System.Drawing.Color.DimGray;
-            this.BardHeadGraze.Location = new System.Drawing.Point(6, 177);
+            this.BardHeadGraze.Location = new System.Drawing.Point(6, 108);
             this.BardHeadGraze.Name = "BardHeadGraze";
             this.BardHeadGraze.Size = new System.Drawing.Size(82, 17);
             this.BardHeadGraze.TabIndex = 7;
             this.BardHeadGraze.TabStop = false;
             this.BardHeadGraze.Text = "Head Graze";
             this.BardHeadGraze.UseVisualStyleBackColor = true;
-            // 
-            // BardTactician
-            // 
-            this.BardTactician.AutoSize = true;
-            this.BardTactician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BardTactician.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BardTactician.ForeColor = System.Drawing.Color.White;
-            this.BardTactician.Location = new System.Drawing.Point(6, 131);
-            this.BardTactician.Name = "BardTactician";
-            this.BardTactician.Size = new System.Drawing.Size(66, 17);
-            this.BardTactician.TabIndex = 5;
-            this.BardTactician.TabStop = false;
-            this.BardTactician.Text = "Tactician";
-            this.BardTactician.UseVisualStyleBackColor = true;
-            this.BardTactician.CheckedChanged += new System.EventHandler(this.BardTactician_CheckedChanged);
-            // 
-            // BardInvigorate
-            // 
-            this.BardInvigorate.AutoSize = true;
-            this.BardInvigorate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BardInvigorate.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.BardInvigorate.ForeColor = System.Drawing.Color.White;
-            this.BardInvigorate.Location = new System.Drawing.Point(6, 108);
-            this.BardInvigorate.Name = "BardInvigorate";
-            this.BardInvigorate.Size = new System.Drawing.Size(75, 17);
-            this.BardInvigorate.TabIndex = 4;
-            this.BardInvigorate.TabStop = false;
-            this.BardInvigorate.Text = "Invigorate";
-            this.BardInvigorate.UseVisualStyleBackColor = true;
-            this.BardInvigorate.CheckedChanged += new System.EventHandler(this.BardInvigorate_CheckedChanged);
             // 
             // BardPeloton
             // 
@@ -10639,13 +10477,8 @@
         private System.Windows.Forms.TabPage pgePaladin;
         private System.Windows.Forms.TabPage pgeWarrior;
         private Design.CustomCheck BardSecondWind;
-        private Design.UserNumeric BardTacticianPct;
-        private Design.UserNumeric BardInvigoratePct;
         private Design.UserNumeric BardSecondWindPct;
-        private Design.CustomCheckDisabled BardArmGraze;
         private Design.CustomCheckDisabled BardHeadGraze;
-        private Design.CustomCheck BardTactician;
-        private Design.CustomCheck BardInvigorate;
         private Design.CustomCheck BardPeloton;
         private Design.CustomCheckDisabled BardLegGraze;
         private Design.CustomCheckDisabled BardFootGraze;
@@ -11127,8 +10960,6 @@
         private Design.CustomGroup BardDamageGroup;
         private Design.CustomCheck BardPitchPerfect;
         private Design.UserNumeric BardRepertoireCount;
-        private Design.CustomCheck BardRefresh;
-        private Design.UserNumeric BardRefreshPct;
         private Design.CustomCheck MachinistRefresh;
         private Design.UserNumeric MachinistRefreshPct;
         private Design.UserNumeric SamuraiGoadPct;
@@ -11139,8 +10970,6 @@
         private Design.CustomCheck MonkGoad;
         private Design.UserNumeric DragoonGoadPct;
         private Design.CustomCheck DragoonGoad;
-        private Design.UserNumeric BardPalisadePct;
-        private Design.CustomCheck BardPalisade;
         private Design.UserNumeric MachinistPalisadePct;
         private Design.CustomCheck MachinistPalisade;
         private Design.CustomGroup BardMiscGroup;
@@ -11232,7 +11061,6 @@
         private Design.UserNumeric WhiteMagePresenceOfMindCount;
         private Design.UserNumeric WhiteMageTemperancePct;
         private Design.UserNumeric WhiteMageTemperanceCount;
-        private Design.CustomCheck BardFoeRequiem;
         private Design.CustomCheck ScholarEnergyDrain;
         private Design.UserNumeric ScholarEnergyDrainPct;
         private Design.CustomGroup BardDoTGroup;
@@ -11259,7 +11087,6 @@
         private Design.CustomGroup WarriorMiscGroup;
         private Design.CustomCheck WarriorPotion;
         private Design.CustomCheck WarriorOpener;
-        private Design.UserNumeric BardFoeRequiemPct;
         private Design.CustomCheck DisableDebug;
         private Design.CustomCheck BardDotSnapshot;
         private Design.CustomCheck DarkKnightOffTank;

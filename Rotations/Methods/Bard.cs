@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Buddy.Coroutines;
 using ff14bot;
 using ff14bot.Managers;
+using ff14bot.Objects;
 using ShinraCo.Settings;
 using ShinraCo.Spells;
 using ShinraCo.Spells.Main;
@@ -22,27 +23,13 @@ namespace ShinraCo.Rotations
             return await MySpells.HeavyShot.Cast();
         }
 
-        private async Task<bool> StraightShotBuff()
-        {
-            if (!Core.Player.HasAura(MySpells.StraightShot.Name, true, 6000))
-            {
-                return await MySpells.StraightShot.Cast();
-            }
-            return false;
-        }
-
         private async Task<bool> StraightShot()
         {
-            if (Core.Player.HasAura("Straighter Shot") && !ActionManager.HasSpell(MySpells.RefulgentArrow.Name))
+            if (Core.Player.HasAura(122))
             {
                 return await MySpells.StraightShot.Cast();
             }
             return false;
-        }
-
-        private async Task<bool> MiserysEnd()
-        {
-            return await MySpells.MiserysEnd.Cast();
         }
 
         private async Task<bool> Bloodletter()
@@ -66,8 +53,7 @@ namespace ShinraCo.Rotations
 
         private async Task<bool> RefulgentArrow()
         {
-            if (Core.Player.HasAura(122) && (!ShinraEx.Settings.BardBarrage || MySpells.Barrage.Cooldown() > 7000 ||
-                                             !Core.Player.HasAura(MySpells.StraightShot.Name, true, 6000)))
+            if (Core.Player.HasAura(122) && (!ShinraEx.Settings.BardBarrage || MySpells.Barrage.Cooldown() > 7000))
             {
                 return await MySpells.RefulgentArrow.Cast();
             }
@@ -84,7 +70,7 @@ namespace ShinraCo.Rotations
                 }
                 if (ActionManager.LastSpell.Name == MySpells.HeavyShot.Name)
                 {
-                    await Coroutine.Wait(1000, () => Core.Player.HasAura(122));
+                    await Coroutine.Wait(1000, () => Core.Player.HasAura(122)); 
                 }
                 if (!Core.Player.HasAura(122))
                 {
@@ -271,15 +257,6 @@ namespace ShinraCo.Rotations
             return false;
         }
 
-        private async Task<bool> FoeRequiem()
-        {
-            if (ShinraEx.Settings.BardFoeRequiem && !Core.Player.HasAura(MySpells.FoeRequiem.Name) &&
-                Core.Player.CurrentManaPercent >= ShinraEx.Settings.BardFoeRequiemPct)
-            {
-                return await MySpells.FoeRequiem.Cast();
-            }
-            return false;
-        }
 
         private async Task<bool> Barrage()
         {
@@ -326,60 +303,6 @@ namespace ShinraCo.Rotations
                 (MovementManager.IsMoving || BotManager.Current.EnglishName == "DeepDive"))
             {
                 return await MySpells.Role.Peloton.Cast(null, false);
-            }
-            return false;
-        }
-
-        private async Task<bool> Invigorate()
-        {
-            if (ShinraEx.Settings.BardInvigorate && Core.Player.CurrentTPPercent < ShinraEx.Settings.BardInvigoratePct)
-            {
-                return await MySpells.Role.Invigorate.Cast();
-            }
-            return false;
-        }
-
-        private async Task<bool> Tactician()
-        {
-            if (ShinraEx.Settings.BardTactician)
-            {
-                var target = Core.Player.CurrentTPPercent < ShinraEx.Settings.BardTacticianPct ? Core.Player
-                    : Helpers.GoadManager.FirstOrDefault(gm => gm.CurrentTPPercent < ShinraEx.Settings.BardTacticianPct);
-
-                if (target != null)
-                {
-                    return await MySpells.Role.Tactician.Cast();
-                }
-            }
-            return false;
-        }
-
-        private async Task<bool> Refresh()
-        {
-            if (ShinraEx.Settings.BardRefresh)
-            {
-                var target = Helpers.HealManager.FirstOrDefault(hm => hm.CurrentManaPercent < ShinraEx.Settings.BardRefreshPct &&
-                                                                      hm.IsHealer());
-
-                if (target != null)
-                {
-                    return await MySpells.Role.Refresh.Cast();
-                }
-            }
-            return false;
-        }
-
-        private async Task<bool> Palisade()
-        {
-            if (ShinraEx.Settings.BardPalisade)
-            {
-                var target = Helpers.HealManager.FirstOrDefault(hm => hm.CurrentHealthPercent < ShinraEx.Settings.BardPalisadePct &&
-                                                                      hm.IsTank());
-
-                if (target != null)
-                {
-                    return await MySpells.Role.Palisade.Cast(target);
-                }
             }
             return false;
         }

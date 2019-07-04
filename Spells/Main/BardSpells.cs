@@ -48,16 +48,6 @@ namespace ShinraCo.Spells.Main
             CastType = CastType.Target
         };
 
-        public Spell MiserysEnd { get; } = new Spell
-        {
-            Name = "Misery's End",
-            ID = 103,
-            Level = 10,
-            GCDType = GCDType.Off,
-            SpellType = SpellType.Damage,
-            CastType = CastType.Target
-        };
-
         public Spell Bloodletter { get; } = new Spell
         {
             Name = "Bloodletter",
@@ -119,16 +109,6 @@ namespace ShinraCo.Spells.Main
             GCDType = GCDType.Off,
             SpellType = SpellType.Cooldown,
             CastType = CastType.Target
-        };
-
-        public Spell FoeRequiem { get; } = new Spell
-        {
-            Name = "Foe Requiem",
-            ID = 115,
-            Level = 35,
-            GCDType = GCDType.On,
-            SpellType = SpellType.Buff,
-            CastType = CastType.Self
         };
 
         public Spell ArmysPaeon { get; } = new Spell

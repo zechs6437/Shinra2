@@ -121,7 +121,7 @@ namespace ShinraCo.Rotations
 
         private async Task<bool> StraightShot()
         {
-            if (!Core.Player.HasAura(MySpells.Archer.StraightShot.Name, true, 4000) || Core.Player.HasAura("Straighter Shot"))
+            if (Core.Player.HasAura("Straight Shot Ready"))
             {
                 return await MySpells.Archer.StraightShot.Cast();
             }
@@ -144,11 +144,6 @@ namespace ShinraCo.Rotations
                 return await MySpells.Archer.VenomousBite.Cast();
             }
             return false;
-        }
-
-        private async Task<bool> MiserysEnd()
-        {
-            return await MySpells.Archer.MiserysEnd.Cast();
         }
 
         private async Task<bool> Bloodletter()

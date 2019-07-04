@@ -74,7 +74,6 @@ namespace ShinraCo.Rotations
             if (await Aetherflow()) return true;
             // Archer
             if (await Bloodletter()) return true;
-            if (await MiserysEnd()) return true;
             if (await RagingStrikes()) return true;
             // Gladiator
             if (await FightOrFlight()) return true;
